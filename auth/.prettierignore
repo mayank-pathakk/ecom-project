@@ -1,0 +1,17 @@
+# Ignore artifacts:   
+build/
+dist/
+coverage/
+
+# /node_modules/* in the project root is ignored by default    
+/node_modules/*
+
+
+# Ignore all HTML files:
+*.html
+
+.gitignore
+.prettierignore
+.*rc
+package.json
+package-lock.json

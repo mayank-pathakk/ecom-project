@@ -1,11 +1,9 @@
 import express from 'express';
+import userRouter from './router/userRouter';
 
 const app = express();
-
-app.get('*', (req, res) => {
-  res.status(200).send({});
-});
-
 app.use(express.json());
+
+app.use('/api/v1', userRouter);
 
 export default app;

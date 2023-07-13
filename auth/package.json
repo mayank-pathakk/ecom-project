@@ -10,7 +10,7 @@
     "prettier": "prettier --check .",
     "prettier:fix": "prettier --write .",
     "start": "",
-    "start:dev": "nodemon /src/index.js",
+    "start:dev": "nodemon ./src/index.ts",
     "test": "jest"
   },
   "jest": {

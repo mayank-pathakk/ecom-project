@@ -1,5 +1,17 @@
 import app from './app';
+import dotenv from 'dotenv'
+import connectDB from './db/connect.js'
 
-app.listen(3000, () => {
-  console.log('Server is running on port 3000');
-});
+dotenv.config({ path: 'src/.env' })
+const port = process.env.PORT;
+const start = async () => {
+  try {
+    await connectDB(process.env.MONGO_URI);
+    const server = app.listen(port, () => {
+      console.log(`Server running on port ${port}`);
+    });
+  } catch (err) {
+    console.log(err);
+  }
+};
+start();
